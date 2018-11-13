@@ -12,13 +12,25 @@ public class Hanoi
     }
     public int move(String tab, int i)
 	{
-		switch i
+	    switch tab.charAt(i)
 		{
-			case 1:
+			case '1':
+			    if (tab.indexOf('2') < i)
+				return 3;
+			    else
+				return 2;
 				break;
-			case 2:
+			case '2':
+			    if (tab.indexOf('3') < i)
+				return 1;
+			    else
+				return 3;
 				break;
-			case 3:
+			case '3':
+			    if (tab.indexOf('1') < i)
+				return 2;
+			    else
+				return 1;
 				break;
 		}
     }
