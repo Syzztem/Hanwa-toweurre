@@ -30,21 +30,17 @@ public class Hanoi
     }
     public static void main(String... args)
     {
-		int numMv = 0;
+		System.out.println(Integer.parseInt(args[0]));
 		byte i = 0;
 		StringBuilder disk = new StringBuilder("");
 		for(int sz = Integer.parseInt(args[0]); sz > 0; sz--)
 			disk.append("1");
 		while(isNotDone(disk.toString()))
 		{
-		    if (isValid(disk.setCharAt(disk.setCharAt(i, move(disk.toString(), i))), i))
-			{
-				numMv++;
+		    if (isValid(disk.toString(), i))
 				disk.setCharAt(i, move(disk.toString(), i));
-			}
 		    i++;
 		}
-		System.out.println("");
 		System.out.println(disk.toString());
     }
 }
