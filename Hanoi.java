@@ -10,14 +10,17 @@ public class Hanoi
 	    return false;
 	return true;
     }
-    public int move(String tab, int i){
-	if(i == 1){
-	    
-	} else if (i == 2){
-
-	} else {
-
-	}
+    public int move(String tab, int i)
+	{
+		switch i
+		{
+			case 1:
+				break;
+			case 2:
+				break;
+			case 3:
+				break;
+		}
     }
     public static void main(String... args)
     {
